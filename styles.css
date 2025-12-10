@@ -1,0 +1,163 @@
+:root {
+    --primary: #6c5ce7;
+    --accent: #a29bfe;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2ff;
+    color: #2d3436;
+    overflow-x: hidden;
+}
+
+/* Floating particles */
+.particles {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--gradient-1);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Hero */
+.hero {
+    background: var(--gradient-2);
+    color: white;
+    text-align: center;
+    padding: 140px 20px 100px;
+    position: relative;
+    overflow: hidden;
+}
+.hero h1 { font-family: 'Fredoka One', cursive; font-size: 4.5rem; margin-bottom: 1rem; }
+.tagline { font-size: 1.6rem; margin-bottom: 2rem; opacity: 0.95; }
+.search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 50px;
+    overflow: hidden;
+}
+.search-bar input {
+    flex: 1;
+    padding: 18px 25px;
+    border: none;
+    font-size: 1.1rem;
+}
+.search-bar button {
+    padding: 0 30px;
+    background: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Categories */
+.categories { padding: 60px 0; background: white; }
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.cat-card {
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.cat-card:hover { transform: translateY(-12px) scale(1.05); }
+
+/* Main */
+.main { padding: 80px 0; }
+h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem 0 2rem;
+    color: #2d3436;
+}
+
+/* Game Cards */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.game-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+.game-card:hover { transform: translateY(-15px); }
+.thumb { height: 180px; background-size: cover; background-position: center; }
+.game-card h3 { padding: 1rem 1.5rem 0; font-size: 1.4rem; }
+.game-card p { padding: 0 1.5rem 1rem; color: #636e72; }
+.play-btn {
+    display: block;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+.info-box {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.info-box .icon { font-size: 3rem; margin-bottom: 1rem; }
+
+/* Bonus Section */
+.bonus-card {
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    padding: 3rem;
+    border-radius: 25px;
+    text-align: center;
+    margin: 4rem 0;
+}
+.bonus-links { margin: 2rem 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+.bonus-btn {
+    background: #2d3436;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* FAQ */
+details { margin: 1rem 0; background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+summary { font-weight: 600; cursor: pointer; }  /* Fixed double "cursor:" */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .tagline { font-size: 1.3rem; }
+    .search-bar { flex-direction: column; }
+    .search-bar button { padding: 18px; }
+}
